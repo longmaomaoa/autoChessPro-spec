@@ -1,0 +1,60 @@
+# 核心依赖
+opencv-python>=4.8.0           # OpenCV图像处理库
+numpy>=1.24.0                  # 科学计算基础库
+PyQt6>=6.5.0                   # GUI框架
+pyyaml>=6.0                    # YAML配置文件处理
+pillow>=10.0.0                 # 图像格式支持
+
+# 屏幕捕获 (Windows专用)
+dxcam>=0.0.5                   # 高性能屏幕捕获 (基于Desktop Duplication API)
+pywin32>=306                   # Windows API支持 (多显示器检测)
+
+# AI模型和机器学习
+ultralytics>=8.0.0            # YOLOv8目标检测框架
+torch>=2.0.0                  # PyTorch深度学习框架
+torchvision>=0.15.0           # 计算机视觉模型库
+
+# 象棋引擎通信
+# subprocess                   # Python内置库，无需安装
+# python-chess>=1.999          # 可选：国际象棋库参考实现
+
+# 性能监控和系统信息
+psutil>=5.9.0                  # 系统资源监控 (CPU、内存使用)
+
+# 数据科学和分析
+pandas>=2.0.0                  # 数据分析库 (可选，用于统计分析)
+matplotlib>=3.7.0              # 数据可视化 (可选，用于性能图表)
+
+# 网络和HTTP (可选功能)
+requests>=2.31.0               # HTTP请求库 (用于更新检查)
+urllib3>=2.0.0                 # URL处理库
+
+# 测试框架
+pytest>=7.0.0                 # Python测试框架
+pytest-cov>=4.0.0             # 测试覆盖率
+pytest-mock>=3.10.0           # Mock测试对象
+pytest-qt>=4.2.0              # PyQt测试支持
+pytest-benchmark>=4.0.0       # 性能基准测试
+
+# 代码质量和格式化
+black>=23.0.0                 # 代码格式化工具
+flake8>=6.0.0                 # 代码风格检查
+mypy>=1.0.0                   # 静态类型检查
+isort>=5.12.0                 # import语句排序
+bandit>=1.7.0                 # 安全漏洞检查
+
+# 日志和配置
+loguru>=0.7.0                 # 现代化日志库
+python-dotenv>=1.0.0          # 环境变量管理
+
+# 文档生成 (开发用)
+sphinx>=7.0.0                 # 文档生成工具
+sphinx-rtd-theme>=1.3.0       # 文档主题
+
+# 打包和分发
+setuptools>=65.0              # 打包工具
+wheel>=0.40.0                 # 打包格式支持
+pyinstaller>=5.13.0           # 可执行文件打包
+
+# 数据库 (内置)
+# sqlite3                     # Python内置SQLite支持
