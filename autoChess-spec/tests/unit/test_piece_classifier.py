@@ -28,10 +28,10 @@ sys.path.insert(0, str(Path(__file__).parent.parent.parent / "src"))
 
 from chess_ai.vision.piece_classifier import (
     PieceType, RecognitionMethod, PieceDetection, ClassificationResult,
-    ClassificationStats, ChessPieceClassifier, ClassificationError
+    ClassifierStats, ChessPieceClassifier, ClassificationError
 )
 from chess_ai.config.config_manager import ConfigManager
-from chess_ai.data.pieces import Position
+from chess_ai.core.piece import Position
 
 
 class TestPieceType(unittest.TestCase):

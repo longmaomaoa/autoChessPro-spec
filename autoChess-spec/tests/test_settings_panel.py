@@ -105,7 +105,9 @@ for widget_name in ['QWidget', 'QVBoxLayout', 'QHBoxLayout', 'QTabWidget',
                    'QScrollArea', 'QTextEdit', 'QLineEdit', 'QFileDialog',
                    'QColorDialog', 'QFontDialog', 'QMessageBox', 'QSplitter',
                    'QListWidget', 'QListWidgetItem', 'QTreeWidget', 'QTreeWidgetItem',
-                   'QProgressBar', 'QButtonGroup', 'QRadioButton', 'QFrame']:
+                   'QProgressBar', 'QButtonGroup', 'QRadioButton', 'QFrame',
+                   'QMainWindow', 'QMenuBar', 'QMenu', 'QStatusBar', 'QToolBar',
+                   'QApplication', 'QDialog']:
     setattr(sys.modules['PyQt6.QtWidgets'], widget_name, MockQWidget)
 
 setattr(sys.modules['PyQt6.QtCore'], 'Qt', MockQt)
@@ -113,6 +115,10 @@ setattr(sys.modules['PyQt6.QtCore'], 'pyqtSignal', lambda *args: lambda x: x)
 setattr(sys.modules['PyQt6.QtCore'], 'QSettings', MockQWidget)
 setattr(sys.modules['PyQt6.QtCore'], 'QTimer', MockQWidget)
 setattr(sys.modules['PyQt6.QtCore'], 'QRect', MockQWidget)
+setattr(sys.modules['PyQt6.QtCore'], 'QSize', MockQWidget)
+setattr(sys.modules['PyQt6.QtCore'], 'QThread', MockQWidget)
+setattr(sys.modules['PyQt6.QtCore'], 'QObject', MockQWidget)
+setattr(sys.modules['PyQt6.QtCore'], 'pyqtSlot', lambda *args: lambda x: x)
 
 setattr(sys.modules['PyQt6.QtGui'], 'QFont', MockQFont)
 setattr(sys.modules['PyQt6.QtGui'], 'QColor', MockQColor)
@@ -122,6 +128,10 @@ setattr(sys.modules['PyQt6.QtGui'], 'QIcon', MockQWidget)
 setattr(sys.modules['PyQt6.QtGui'], 'QPainter', MockQWidget)
 setattr(sys.modules['PyQt6.QtGui'], 'QPen', MockQWidget)
 setattr(sys.modules['PyQt6.QtGui'], 'QBrush', MockQWidget)
+setattr(sys.modules['PyQt6.QtGui'], 'QAction', MockQWidget)
+setattr(sys.modules['PyQt6.QtGui'], 'QKeySequence', MockQWidget)
+setattr(sys.modules['PyQt6.QtGui'], 'QCloseEvent', MockQWidget)
+setattr(sys.modules['PyQt6.QtGui'], 'QResizeEvent', MockQWidget)
 
 # Now import the actual modules after mocking
 sys.path.insert(0, 'src')

@@ -12,7 +12,7 @@ from typing import Optional, Dict, Any
 from PyQt6.QtWidgets import (
     QMainWindow, QWidget, QVBoxLayout, QHBoxLayout, QGridLayout,
     QSplitter, QMenuBar, QMenu, QStatusBar, QToolBar, QLabel,
-    QFrame, QPushButton, QAction, QMessageBox, QApplication,
+    QFrame, QPushButton, QMessageBox, QApplication,
     QFileDialog, QDialog, QTabWidget, QScrollArea, QGroupBox
 )
 from PyQt6.QtCore import (
@@ -24,7 +24,7 @@ from PyQt6.QtGui import (
     QKeySequence, QCloseEvent, QResizeEvent
 )
 
-from chess_ai.core.config_manager import ConfigManager
+from chess_ai.config.config_manager import ConfigManager
 from chess_ai.core.board_state import BoardState
 from chess_ai.ai_engine.ai_engine_interface import MoveSuggestion, GameSituation
 from chess_ai.ai_engine.position_evaluation import WinProbability

@@ -28,10 +28,12 @@ from collections import deque
 import logging
 
 from chess_ai.config.config_manager import ConfigManager
-from chess_ai.data.pieces import Position, Move, BoardState, Piece, PieceColor
+from chess_ai.core.move import Move
+from chess_ai.core.board_state import BoardState
+from chess_ai.core.piece import Piece, PieceColor, Position
 from chess_ai.vision.board_detector import ChessBoardDetector, BoardRegion, DetectionStats as BoardDetectionStats
 from chess_ai.vision.piece_classifier import ChessPieceClassifier, PieceType, ClassificationResult, RecognitionMethod
-from chess_ai.utils.logger import Logger
+from chess_ai.utils.logger import get_logger
 
 
 class MonitoringState(Enum):
@@ -140,7 +142,7 @@ class BoardRecognitionModule:
             config: 配置管理器，如果为None则使用默认配置
         """
         self.config = config or ConfigManager()
-        self.logger = Logger(__name__)
+        self.logger = get_logger(__name__)
         
         # 初始化核心组件
         self.board_detector = ChessBoardDetector(self.config)

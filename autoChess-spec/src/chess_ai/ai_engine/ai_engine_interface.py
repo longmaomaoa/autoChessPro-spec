@@ -16,7 +16,7 @@ from typing import List, Dict, Optional, Callable, Tuple, Any
 from concurrent.futures import ThreadPoolExecutor, Future
 
 from chess_ai.core.board_state import BoardState, PieceType, PieceColor
-from chess_ai.core.config_manager import ConfigManager
+from chess_ai.config.config_manager import ConfigManager
 from chess_ai.ai_engine.pikafish_engine import PikafishEngine, EngineAnalysis
 
 

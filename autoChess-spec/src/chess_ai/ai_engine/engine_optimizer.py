@@ -21,7 +21,7 @@ import psutil
 import gc
 
 from chess_ai.core.board_state import BoardState
-from chess_ai.core.config_manager import ConfigManager
+from chess_ai.config.config_manager import ConfigManager
 from chess_ai.ai_engine.pikafish_engine import PikafishEngine, EngineAnalysis, EngineState, PikafishEngineError
 
 

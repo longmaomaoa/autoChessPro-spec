@@ -31,8 +31,10 @@ from typing import List, Dict, Optional, Callable, Tuple, Any
 from pathlib import Path
 
 from chess_ai.config.config_manager import ConfigManager
-from chess_ai.data.pieces import Position, Move, BoardState, Piece
-from chess_ai.utils.logger import Logger
+from chess_ai.core.move import Move
+from chess_ai.core.board_state import BoardState
+from chess_ai.core.piece import Piece, Position
+from chess_ai.utils.logger import get_logger
 
 
 class EngineState(Enum):
@@ -134,7 +136,7 @@ class PikafishEngine:
             config: 配置管理器
         """
         self.config = config or ConfigManager()
-        self.logger = Logger(__name__)
+        self.logger = get_logger(__name__)
         
         # 引擎状态
         self.state = EngineState.IDLE

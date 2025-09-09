@@ -29,10 +29,11 @@ import logging
 import statistics
 
 from chess_ai.config.config_manager import ConfigManager
-from chess_ai.data.pieces import Position, BoardState, Piece
+from chess_ai.core.board_state import BoardState
+from chess_ai.core.piece import Piece, Position
 from chess_ai.vision.piece_classifier import PieceType, ClassificationResult, PieceDetection
 from chess_ai.vision.board_detector import BoardRegion
-from chess_ai.utils.logger import Logger
+from chess_ai.utils.logger import get_logger
 
 
 class RobustnessLevel(Enum):
@@ -114,7 +115,7 @@ class RobustnessHandler:
             config: 配置管理器
         """
         self.config = config or ConfigManager()
-        self.logger = Logger(__name__)
+        self.logger = get_logger(__name__)
         
         # 配置参数
         self._load_config_params()

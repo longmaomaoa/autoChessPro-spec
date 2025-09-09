@@ -119,8 +119,8 @@
 
 1. **克隆项目**
 ```bash
-git clone https://github.com/your-repo/chinese-chess-ai-assistant.git
-cd chinese-chess-ai-assistant
+git clone https://github.com/longmaomaoa/autoChessPro-spec.git
+cd autoChess-spec
 ```
 
 2. **环境设置**

@@ -10,7 +10,7 @@ from typing import Optional
 
 from chess_ai.config import ConfigManager
 from chess_ai.core.board_state import BoardState
-from chess_ai.ui import MainWindow
+from chess_ai.ui.main_window import MainWindow
 from chess_ai.vision import ScreenCaptureModule, BoardRecognitionModule
 from chess_ai.ai_engine import AIEngineInterface
 from chess_ai.data import DataManager
